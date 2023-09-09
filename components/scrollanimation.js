@@ -23,7 +23,7 @@ function ScrollAnimation({ children }) {
       opacity: 1,
     },
     config: {
-      tension: 200, // Adjust this value to control the speed of the animation
+      tension: 75, // Adjust this value to control the speed of the animation
     },
   });
 
