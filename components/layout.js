@@ -8,19 +8,20 @@ import IconButton from '@mui/material/IconButton';
 import {Roboto} from "@next/font/google"
 import Button from '../components/button'
 import { motion } from "framer-motion"
+import ScrollAnimation from './scrollanimation';
 
 const roboto = Roboto({
   weight:"900",
   subsets:["latin"]
 })
 
-
 const name = 'Jonathan Lizama';
 export const siteTitle = 'Portfolio';
 
 export default function Layout({ children, home }) {
   return (
-    <motion.div animate={{ opacity: [0, .5, .75, 1]  }} transition={{ delay: .1 }} >
+    <motion.div animate={{ opacity: [0, .5, .75, 1] }}>
+    <ScrollAnimation>
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
@@ -48,7 +49,7 @@ export default function Layout({ children, home }) {
             <Image
               priority
               src="/images/profile.jpg"
-              className={`${utilStyles.borderCircle} animate-fadeIn opacity-0 group-hover:opacity-100`}
+              className={utilStyles.borderCircle}
               height={144}
               width={144}
               alt=""
@@ -61,7 +62,7 @@ export default function Layout({ children, home }) {
               <Image
                 priority
                 src="/images/profile.jpg"
-                className={`${utilStyles.borderCircle} animate-fadeIn opacity-0 group-hover:opacity-100`}
+                className={utilStyles.borderCircle}
                 height={108}
                 width={108}
                 alt=""
@@ -86,6 +87,7 @@ export default function Layout({ children, home }) {
         </div>
       )}
     </div>
+    </ScrollAnimation>
     </motion.div>
   );
 }
