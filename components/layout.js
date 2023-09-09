@@ -3,12 +3,24 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import HomeIcon from '@mui/icons-material/Home';
+import IconButton from '@mui/material/IconButton';
+import {Roboto} from "@next/font/google"
+import Button from '../components/button'
+import { motion } from "framer-motion"
+
+const roboto = Roboto({
+  weight:"900",
+  subsets:["latin"]
+})
+
 
 const name = 'Jonathan Lizama';
 export const siteTitle = 'Portfolio';
 
 export default function Layout({ children, home }) {
   return (
+    <motion.div animate={{ opacity: [0, .5, .75, 1]  }} transition={{ delay: .1 }} >
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
@@ -25,13 +37,18 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <main className="flex items-left justify-left h-screen flex-col">
+        <h2 className={`${roboto.className} text-4xl sm:text-6xl md:text-9xl text-center text-gray-800`}></h2>
+        <h2 className={`${roboto.className} text-4xl sm:text-6xl md:text-9xl text-center text-white `}></h2>
+        <Button/>
+      </main>
       <header className={styles.header}>
         {home ? (
           <>
             <Image
               priority
               src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
+              className={`${utilStyles.borderCircle} animate-fadeIn opacity-0 group-hover:opacity-100`}
               height={144}
               width={144}
               alt=""
@@ -44,7 +61,7 @@ export default function Layout({ children, home }) {
               <Image
                 priority
                 src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
+                className={`${utilStyles.borderCircle} animate-fadeIn opacity-0 group-hover:opacity-100`}
                 height={108}
                 width={108}
                 alt=""
@@ -61,9 +78,14 @@ export default function Layout({ children, home }) {
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
+          <Link href="/">
+            <IconButton
+              className='bg-gray-800 dark:bg-gray-100 hover:bg-gray-600 dark:hover:bg-gray-300 transition-all duration-100 text-white dark:text-gray-800 rounded-full p-2'>
+        <HomeIcon />
+      </IconButton></Link>
         </div>
       )}
     </div>
+    </motion.div>
   );
 }
