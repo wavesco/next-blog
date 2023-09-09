@@ -19,11 +19,11 @@ function ScrollAnimation({ children }) {
   const springProps = useSpring({
     from: { transform: 'translateY(100px)', opacity: 0 },
     to: {
-      transform: `translateY(${scrollY * 0.25}px)`,
+      transform: `translateY(${scrollY * 0.15}px)`,
       opacity: 1,
     },
     config: {
-      tension: 10, // Adjust this value to control the speed of the animation
+      tension: 100, // Adjust this value to control the speed of the animation
     },
   });
 
