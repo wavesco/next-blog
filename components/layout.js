@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import HomeIcon from '@mui/icons-material/Home';
 import IconButton from '@mui/material/IconButton';
-import {Roboto} from "@next/font/google"
+import {Roboto} from "next/font/google"
 import Button from '../components/button'
 import { motion } from "framer-motion"
 import ScrollAnimation from './scrollanimation';
