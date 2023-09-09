@@ -6,10 +6,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.8",
+    "@next/font": "^13.4.19",
     "clsx": "^2.0.0",
     "date-fns": "^2.30.0",
+    "framer-motion": "^10.16.4",
     "gray-matter": "^4.0.3",
     "next": "latest",
+    "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "remark": "^14.0.3",
@@ -18,5 +24,8 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
   }
 }
