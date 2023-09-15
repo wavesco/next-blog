@@ -33,7 +33,9 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <main className="flex items-left justify-left h-screen flex-col">
+      <div className={styles.buttonContainer}>
         <Button/>
+      </div>
       </main>
       <header className={styles.header}>
         {home ? (
