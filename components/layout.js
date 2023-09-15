@@ -5,15 +5,9 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import HomeIcon from '@mui/icons-material/Home';
 import IconButton from '@mui/material/IconButton';
-import {Roboto} from "next/font/google"
 import Button from '../components/button'
 import { motion } from "framer-motion"
 import ScrollAnimation from './scrollanimation';
-
-const roboto = Roboto({
-  weight:"900",
-  subsets:["latin"]
-})
 
 const name = 'Jonathan Lizama';
 export const siteTitle = 'Portfolio';
@@ -26,8 +20,8 @@ export default function Layout({ children, home }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
+          name="portfolio"
+          content="personal website portfolio using Next.js"
         />
         <meta
           property="og:image"
@@ -39,8 +33,6 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <main className="flex items-left justify-left h-screen flex-col">
-        <h2 className={`${roboto.className} text-4xl sm:text-6xl md:text-9xl text-center text-gray-800`}></h2>
-        <h2 className={`${roboto.className} text-4xl sm:text-6xl md:text-9xl text-center text-white `}></h2>
         <Button/>
       </main>
       <header className={styles.header}>
