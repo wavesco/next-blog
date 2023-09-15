@@ -33,6 +33,7 @@
     color: inherit;
   }
   
+  
   .padding1px {
     padding-top: 1px;
   }
@@ -48,5 +49,5 @@
   }
   
   .lightText {
-    color: #666;
+    color: #2b2b2b;
   }
