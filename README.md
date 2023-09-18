@@ -1,4 +1,8 @@
-## Demo
+# Next.js Portfolio/Blog Website
+
+This project is a simple, customizable portfolio and blog website built with Next.js.
+
+## Demo 
 
 https://next-js-six-swart.vercel.app/
 
