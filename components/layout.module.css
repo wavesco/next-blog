@@ -1,7 +1,7 @@
 .container {
   max-width: 36rem;
   padding: 0 1rem;
-  margin: 3rem auto 6rem;
+  margin: 1rem auto 6rem;
 }
 
 .header {
@@ -21,4 +21,5 @@
 .buttonContainer {
   display: flex;
   justify-content: flex-end;
+  margin-top: 3rem;
 }
