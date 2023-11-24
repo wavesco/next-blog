@@ -23,7 +23,7 @@ export default function Home({ allPostsData }) {
       <section className={utilStyles.headingMd}>
         <p>
           Hello, I'm Jonathan, and I'm a software developer based in Houston, Texas.
-          This is a collection of projects and blog posts that I'm currently working on, which I hope you find interesting. 
+          This is a collection of project updates, which I hope you find interesting. 
           Feel free to reach out to me on {' '} 
           <a href="https://www.linkedin.com/in/jonathan-lizama"> LinkedIn </a>
           or {' '}
