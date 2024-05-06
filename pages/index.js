@@ -22,8 +22,9 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          Hello, I'm Jonathan, and I'm a software developer based in Houston, Texas.
-          This is a collection of project updates, which I hope you find interesting. 
+        👋 Hey there!
+        I’m Jon, a code nomad navigating the digital landscapes of Houston, Texas. 
+        My mission? To unravel the intricacies of silicon. 🚀👾
           Feel free to reach out to me on {' '} 
           <a href="https://www.linkedin.com/in/jonathan-lizama"> LinkedIn </a>
           or {' '}
@@ -31,7 +32,7 @@ export default function Home({ allPostsData }) {
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <h2 className={utilStyles.headingLg}>Posts</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
