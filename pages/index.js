@@ -23,8 +23,7 @@ export default function Home({ allPostsData }) {
       <section className={utilStyles.headingMd}>
         <p>
         👋 Hey there!
-        I’m Jon, a code nomad navigating the digital landscapes of Houston, Texas. 
-        My mission? To unravel the intricacies of silicon. 🚀👾
+        I’m Jon, a code nomad navigating the digital landscapes of Houston, Texas. 🚀👾
           Feel free to reach out to me on {' '} 
           <a href="https://www.linkedin.com/in/jonathan-lizama"> LinkedIn </a>
           or {' '}
